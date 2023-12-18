@@ -25,4 +25,14 @@ public class StringTest {
         String[] actual2 = "1".split(",");
         assertThat(actual2).containsOnly("1");
     }
+
+    /*
+    요구사항 2
+    "(1,2)" 값이 주어졌을 때 String의 substring() 메소드를 활용해 ()을 제거하고 "1,2"를 반환하도록 구현한다.
+     */
+    @Test
+    void substring() {
+        String actual = "(1,2)".substring(1, 4);
+        assertThat(actual).isEqualTo("1,2");
+    }
 }
